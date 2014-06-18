@@ -3,7 +3,8 @@ import bb.cascades 1.2
 Page {
     
     titleBar: TitleBar {
-        title: qsTr ("Smugmug App")
+        id: titleBar
+        title: qsTr ("SmugViewer")
     }
 
     Container {
@@ -44,7 +45,12 @@ Page {
 	} // Containder contGaleries
      
     // public         
-    function fillAlbums(albums) {
+    function fillAlbums(user, albums) {
+        if (user == "") {
+            titleBar.title = "SmugViewer"
+        } else {
+        	titleBar.title = "SmugViewer: " + user
+        }
         albumListModel.clear();
         albumListModel.append(albums);
     }

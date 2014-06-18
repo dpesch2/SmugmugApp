@@ -470,7 +470,24 @@ void Communicator::processJSONResponse(QScriptValue* sc, QNetworkReply* reply) {
 	}
 }
 
+bool Communicator::processResponseStat(QScriptValue *sc) {
+	QString stat = queryProperty(*sc, QString("stat")).toString();
+	if (stat == QString::null || stat != "ok") {
+			QString message = queryProperty(*sc, QString("message")).toString();
+			if ( message == QString::null ) {
+				message = "Unknown error.";
+			}
+			emit error( message );
+			return false;
+	}
+	return true;
+}
+
 void Communicator::processLoginResponse(QScriptValue *sc) {
+	if (! processResponseStat(sc)) {
+		return;
+	}
+
 	m_session = queryProperty(*sc, QString("Login/Session/id")).toString();
 	if (m_session != QString::null) {
 		QMap<QString, QString> params;
@@ -481,6 +498,10 @@ void Communicator::processLoginResponse(QScriptValue *sc) {
 }
 
 void Communicator::processAlbumsResponse(QScriptValue *sc) {
+	if (! processResponseStat(sc)) {
+			return;
+	}
+
 	QScriptValue albums = queryProperty(*sc, QString("Albums"));
 	QScriptValueIterator it(albums);
 

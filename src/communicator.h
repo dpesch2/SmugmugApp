@@ -67,6 +67,7 @@ private:
     void clear();
     Image* findImage(QString albumId, QString imageId ) const;
     bool storeImage( QString fullPath, QNetworkReply* reply );
+    bool processResponseStat(QScriptValue *sc);
 
     QNetworkAccessManager* m_nwam;
     PictureCardPreview* m_pictureCardPreview;

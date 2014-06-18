@@ -4,8 +4,8 @@
 <context>
     <name>AlbumListPage</name>
     <message>
-        <location filename="../assets/AlbumListPage.qml" line="6"/>
-        <source>Smugmug App</source>
+        <location filename="../assets/AlbumListPage.qml" line="7"/>
+        <source>SmugViewer</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -69,43 +69,43 @@
     <name>main</name>
     <message>
         <location filename="../assets/main.qml" line="17"/>
-        <location filename="../assets/main.qml" line="117"/>
+        <location filename="../assets/main.qml" line="113"/>
         <source>Preferences</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="98"/>
+        <location filename="../assets/main.qml" line="94"/>
         <source>Saving finished to </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="121"/>
+        <location filename="../assets/main.qml" line="117"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="129"/>
+        <location filename="../assets/main.qml" line="125"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="161"/>
+        <location filename="../assets/main.qml" line="157"/>
         <source>Save Album</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="175"/>
-        <location filename="../assets/main.qml" line="243"/>
+        <location filename="../assets/main.qml" line="171"/>
+        <location filename="../assets/main.qml" line="239"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="219"/>
+        <location filename="../assets/main.qml" line="215"/>
         <source>Save Image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../assets/main.qml" line="231"/>
+        <location filename="../assets/main.qml" line="227"/>
         <source>View &amp; Share Image</source>
         <translation type="unfinished"></translation>
     </message>

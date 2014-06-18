@@ -32,8 +32,8 @@ NavigationPane {
         onCreationCompleted: {
             if ( settings.user == "" ) {
                 mainPage.push(pagePreferences);
-                toast.body = "Please set username."
-                toast.show()
+                toastOk.body = "Please set username."
+                toastOk.show()
         	} else {
                 comm.login(settings.user);
         	}
@@ -47,12 +47,17 @@ NavigationPane {
             id: toast
         },
         
+        SystemToast {
+            id: toastOk
+            button.label: "OK"
+        },
+         
         Settings {
             id: settings
             
             onUserChanged: {
                     pageImageList.fillImages("",[]);
-                    pageAlbumList.fillAlbums([]);
+                    pageAlbumList.fillAlbums("", []);
                     comm.login(settings.user);
             }
         },
@@ -63,7 +68,7 @@ NavigationPane {
             onAlbumsLoaded: {
                 // Update album list
                 var albums = comm.getAlbums();
-                pageAlbumList.fillAlbums(albums);
+                pageAlbumList.fillAlbums(settings.user, albums);
             }
 
             onImageLoaded: {
@@ -91,8 +96,8 @@ NavigationPane {
             }
 
             onError: {
-                toast.body = errorMsg;
-                toast.show();
+                toastOk.body = errorMsg;
+                toastOk.show();
             }
         },
         // end of Communicator
@@ -277,10 +282,7 @@ NavigationPane {
             pageImageDetail.imageSource = selectedItem.largeImage;
         }
         
-        appCover.imageSource = selectedItem.thumbImage;
-        appCover.text = selectedItem.filename;
         pageImageDetail.showImageDetails(selectedItem);
-        
         mainPage.selectedImageId = selectedItem.id;
         mainPage.push(pageImageDetail);
     }
