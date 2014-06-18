@@ -52,6 +52,8 @@
 
     <!--  Name of author which is used for signing. Must match the developer name of your development certificate. -->
     <author>Daniel Pesch</author>
+    <authorId>gYAAgL-rpLFAvMawTYoaDniFikM</authorId>
+    <category>core.media</category>
     <description>SmugViewer is simple application for viewing and downloading images from SmugMug.</description>
     
     <!--  Unique author ID assigned by signing authority. Required if using debug tokens. -->
@@ -64,7 +66,6 @@
     </initialWindow>
     
     <!--  The category where the application appears. Either core.games or core.media. -->
-    <category>core.media</category>
     <icon>
        <image>icon.png</image>
     </icon>
