@@ -1,4 +1,4 @@
-APP_NAME = SmugmugApp
+APP_NAME = SmugViewer
 LIBS += -lbbcascadespickers -lbbsystem
 CONFIG += qt warn_on cascades10
 

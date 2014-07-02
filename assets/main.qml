@@ -38,6 +38,10 @@ NavigationPane {
                 comm.login(settings.user);
         	}
         }
+        
+        onSelectAlbum: {
+            mainPage.selectAlbum(selectedItem);
+        }
     }
 
     attachedObjects: [
@@ -136,6 +140,10 @@ NavigationPane {
         // List of all images for selected album
         ImageListPage {
             id: pageImageList
+            
+            onSelectImage: {
+                mainPage.selectImage(selectedItem);
+            }
             
             attachedObjects: [
                 

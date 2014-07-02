@@ -1,6 +1,8 @@
 import bb.cascades 1.2
 
 Page {
+    
+    signal selectImage(variant selectedItem)
 
     titleBar: TitleBar {
         id: pageImageListTitle
@@ -19,7 +21,7 @@ Page {
 	                if ( active ) {
 	                    console.log( "show image " + indexPath[0] );
 	                    var selectedItem = imageListModel.data(indexPath);
-	                    mainPage.selectImage(selectedItem);
+                        selectImage(selectedItem);
 	                }
 	            }
 	

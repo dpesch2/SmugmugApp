@@ -6,7 +6,6 @@
 class Category
 {
 public:
-    Category();
     Category(QString id, QString name);
 
     QString getName() const { return m_name; }

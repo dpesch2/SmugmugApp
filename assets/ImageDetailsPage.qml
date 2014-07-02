@@ -14,7 +14,7 @@ Page {
 	    ScrollView {
 	        ImageView {
 	            id: imageView
-	            imageSource: "asset:///images/loading.png"
+	            //imageSource: "asset:///images/loading.png"
 	        }
 	        scrollViewProperties {
 	            scrollMode: ScrollMode.Both

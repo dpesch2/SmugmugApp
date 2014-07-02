@@ -2,8 +2,8 @@
 #include <qdebug.h>
 
 Album::Album(QString id, QString key, QString title, QSharedPointer<Category> category, QSharedPointer<Category> subcategory, QObject* parent)
-    : QObject(parent), m_id(id), m_key(key), m_title(title), m_category(category), m_subcategory(subcategory), m_imageCount(0),
-      m_thumbImage("")
+    : QObject(parent), m_id(id), m_key(key), m_title(title), m_category(category), m_subcategory(subcategory),
+      m_imageCount(0), m_thumbImage("")
 {
 }
 

@@ -1,13 +1,11 @@
 1
-11
+9
 AlbumListPage.qml
 ImageDetailsPage.qml
 ImageListPage.qml
-images/album.jpg
-images/alert.png
+images/album.png
 images/bb_action_saveas.png
 images/bb_action_share.png
-images/loading.png
-images/smugmug_logo.png
+images/image.png
 main.qml
 PreferrencesPage.qml

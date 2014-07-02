@@ -1,11 +1,13 @@
 #ifndef ALBUM_H
 #define ALBUM_H
 
-#include "category.h"
-#include "image.h"
 #include <QMap>
 #include <QSharedPointer>
 #include <QVariantMap>
+
+#include "category.h"
+#include "image.h"
+
 
 class Album : public QObject
 {
@@ -55,12 +57,12 @@ private:
     QString m_id;
     QString m_key;
     QString m_title;
-    uint m_imageCount;
-    QString m_thumbImage;
     //these two should be probably shared pointers as long as one album can share same Category and Subcategory as well
     QSharedPointer<Category> m_category;
     QSharedPointer<Category> m_subcategory;
 
+    uint m_imageCount;
+    QString m_thumbImage;
     QList<Image*> m_images;
 
     // for quick access by id

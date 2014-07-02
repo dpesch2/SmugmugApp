@@ -2,6 +2,8 @@ import bb.cascades 1.2
 
 Page {
     
+    signal selectAlbum(variant selectedItem)
+    
     titleBar: TitleBar {
         id: titleBar
         title: qsTr ("SmugViewer")
@@ -20,7 +22,7 @@ Page {
             	 if ( active ) {
                     console.log( "show album " + indexPath[0] );
                     var selectedItem = albumListModel.data(indexPath);
-                    mainPage.selectAlbum(selectedItem);
+                    selectAlbum(selectedItem)
             	}
             }
             
@@ -37,7 +39,7 @@ Page {
                          title: ListItemData.title 
                          description: ( ListItemData.subcategory == "" ? ListItemData.category : ListItemData.category + " / " +ListItemData.subcategory )
                          status: ListItemData.imageCount  
-                         imageSource:  ListItemData.thumbImage != "" ? ListItemData.thumbImage : "asset:///images/album.jpg"
+                         imageSource:  ListItemData.thumbImage != "" ? ListItemData.thumbImage : "asset:///images/album.png"
                      }
                 }
              ]
